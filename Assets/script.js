@@ -87,3 +87,18 @@ function getData(event) {
 
 
 }
+
+function postData(data) {
+    let currentTemp = data.current.temp;
+    let currentWind = data.current.wind_speed;
+    let currentHumid = data.current.humidity;
+    let currentUv = data.current.uvi;
+    let weathIcon = data.current.weather[0].icon;
+    let weathIconLink = "https://openweathermap.org/img/w/" + weathIcon + ".png";
+    let cityUpper = city.toUpperCase();
+
+    current
+
+
+
+}
