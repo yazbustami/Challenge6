@@ -54,3 +54,36 @@ let humidityFive = document.querySelector("#humidity-five");
 let prevCityButtons = document.querySelector("#prev-city");
 let prevButtons = document.querySelector("#.btn-block");
 
+function getData(event) {
+    storeData();
+
+    let location = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=1e64d4984f9bd49dd45881e4e3f332ca";
+    let lat;
+    let lon;
+
+    // new search
+    currentlocation.textContent = "";
+    currenticon.textContent= "";
+    temp.textContent = "";
+    wind.textContent = "";
+    humid.textContent = "";
+    uvindex.textContent = "";
+
+    fetch(location)
+        .then((response) => response.json())
+        .then(function (data) {
+            lat = data[0].lat;
+            lon = data[0].lon;
+            let apiCurrent = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=1e64d4984f9bd49dd45881e4e3f332ca";
+
+            fetch(apiCurrent)
+                .then((response) => response.json())
+                .then(function (data) {
+                    postData(data);
+                    return (data);
+                });
+        });
+
+
+
+}
