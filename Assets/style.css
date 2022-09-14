@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+    background-image: radial-gradient(rgb(8, 239, 243), rgb(pink));
+    color:brown;
+}
+
+img {
+    display: none;
+}
