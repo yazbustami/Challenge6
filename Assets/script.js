@@ -96,9 +96,66 @@ function postData(data) {
     let weathIcon = data.current.weather[0].icon;
     let weathIconLink = "https://openweathermap.org/img/w/" + weathIcon + ".png";
     let cityUpper = city.toUpperCase();
+    currentCity.textcontent += " " + cityUpper + " " + today;
+    currentIcon.src = weathIconLink;
+    currentIcon.setAttribute("style", "display: inline");
+    temp.textContent = "Temp: " + currentTemp + "°F";
+    wind.textContent = "Wind: " + currentWind + "MPH";
+    humid.textContent = "Humidity: " + currentHumid + "%";
+    uvindex.textContent = "UV Index: " + currentUv;
+    if(currentUv < 2){
+        uvindex.setAttribute("style", "background-color: green")
+    } else if (currentUv < 6){
+        uvindex.setAttribute("style", "background-color: yellow")
+    } else {
+        uvindex.setAttribute("style", "background-color: red")
+    }
 
-    current
+    let day1Temp = data.daily[1].temp.max;
+    let day1Wind = data.daily[1].wind_speed;
+    let day1Humid = data.daily[1].humidity;
+    let day1weathIcon = data.daily[1].weather[0].icon;
+    let day1weathIconLink = "https://openweathermap.org/img/w/" + day1weathIcon + ".png";
+    dateOne.textContent = moment().add(1,'days').format('MM/DD/YYYY')
+    tempOne.textContent = "Temp: " + day1Temp + "°F";
+    windOne.textContent = "Wind: " + day1Wind + "MPH";
+    humidOne.textContent = "Humidity: " + day1Humid + "%";
+    IconOne.src = day1weathIconLink;
+    IconOne.setAttribute("style", "display: inline");
 
+    let day2Temp = data.daily[2].temp.max;
+    let day2Wind = data.daily[2].wind_speed;
+    let day2Humid = data.daily[2].humidity;
+    let day2weathIcon = data.daily[2].weather[0].icon;
+    let day2weathIconLink = "https://openweathermap.org/img/w/" + day2weathIcon + ".png";
+    dateTwo.textContent = moment().add(2,'days').format('MM/DD/YYYY')
+    tempTwo.textContent = "Temp: " + day2Temp + "°F";
+    windTwo.textContent = "Wind: " + day2Wind + "MPH";
+    humidTwo.textContent = "Humidity: " + day2Humid + "%";
+    IconTwo.src = day2weathIconLink;
+    IconTwo.setAttribute("style", "display: inline");
 
+    let day3Temp = data.daily[3].temp.max;
+    let day3Wind = data.daily[3].wind_speed;
+    let day3Humid = data.daily[3].humidity;
+    let day3weathIcon = data.daily[3].weather[0].icon;
+    let day3weathIconLink = "https://openweathermap.org/img/w/" + day3weathIcon + ".png";
+    dateThree.textContent = moment().add(3,'days').format('MM/DD/YYYY')
+    tempThree.textContent = "Temp: " + day3Temp + "°F";
+    windThree.textContent = "Wind: " + day3Wind + "MPH";
+    humidThree.textContent = "Humidity: " + day3Humid + "%";
+    IconThree.src = day3weathIconLink;
+    IconThree.setAttribute("style", "display: inline");
 
+    let day4Temp = data.daily[4].temp.max;
+    let day4Wind = data.daily[4].wind_speed;
+    let day4Humid = data.daily[4].humidity;
+    let day4weathIcon = data.daily[4].weather[0].icon;
+    let day4weathIconLink = "https://openweathermap.org/img/w/" + day4weathIcon + ".png";
+    dateFour.textContent = moment().add(4,'days').format('MM/DD/YYYY')
+    tempFour.textContent = "Temp: " + day4Temp + "°F";
+    windFour.textContent = "Wind: " + day4Wind + "MPH";
+    humidFour.textContent = "Humidity: " + day4Humid + "%";
+    IconFour.src = day4weathIconLink;
+    IconFour.setAttribute("style", "display: inline");
 }
