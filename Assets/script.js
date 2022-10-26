@@ -102,65 +102,65 @@ function postData(dataForToday, dataForFiveDay) {
     humidity.textContent = "Humidity: " + currentHumid + "%";
    
 
-    let day1Temp = dataForFiveDay.main[0].temp_max;
-    let day1Wind = dataForFiveDay.main[0].wind_speed;
-    let day1Humid = dataForFiveDay.main[0].humidity;
-    let day1weatherimage = dataForFiveDay.main[0].weather[0].icon;
-    let day1weatherimageLink = "https://openweathermap.org/img/w/" + day1weatherimage + ".png";
-    dateOne.textContent = moment().add(1,'days').format('MM/DD/YYYY')
-    tempOne.textContent = "Temp: " + day1Temp + "°F";
-    windOne.textContent = "Wind: " + day1Wind + "MPH";
-    humidOne.textContent = "Humidity: " + day1Humid + "%";
-    imageOne.src = day1weatherimageLink;
-    imageOne.setAttribute("style", "display: inline");
+//     let day1Temp = dataForFiveDay.main[0].temp_max;
+//     let day1Wind = dataForFiveDay.main[0].wind_speed;
+//     let day1Humid = dataForFiveDay.main[0].humidity;
+//     let day1weatherimage = dataForFiveDay.main[0].weather[0].icon;
+//     let day1weatherimageLink = "https://openweathermap.org/img/w/" + day1weatherimage + ".png";
+//     dateOne.textContent = moment().add(1,'days').format('MM/DD/YYYY')
+//     tempOne.textContent = "Temp: " + day1Temp + "°F";
+//     windOne.textContent = "Wind: " + day1Wind + "MPH";
+//     humidOne.textContent = "Humidity: " + day1Humid + "%";
+//     imageOne.src = day1weatherimageLink;
+//     imageOne.setAttribute("style", "display: inline");
 
-    // let day2Temp = dataForFiveDay.daily[8].temp.max;
-    // let day2Wind = dataForFiveDay.daily[2].wind_speed;
-    // let day2Humid = dataForFiveDay.daily[2].humidity;
-    // let day2weatherimage = dataForFiveDay.daily[2].weather[0].icon;
-    // let day2weatherimageLink = "https://openweathermap.org/img/w/" + day2weatherimage + ".png";
-    // dateTwo.textContent = moment().add(2,'days').format('MM/DD/YYYY')
-    // tempTwo.textContent = "Temp: " + day2Temp + "°F";
-    // windTwo.textContent = "Wind: " + day2Wind + "MPH";
-    // humidTwo.textContent = "Humidity: " + day2Humid + "%";
-    // imageTwo.src = day2weatherimageLink;
-    // imageTwo.setAttribute("style", "display: inline");
+//     let day2Temp = dataForFiveDay.daily[8].temp.max;
+//     let day2Wind = dataForFiveDay.daily[2].wind_speed;
+//     let day2Humid = dataForFiveDay.daily[2].humidity;
+//     let day2weatherimage = dataForFiveDay.daily[2].weather[0].icon;
+//     let day2weatherimageLink = "https://openweathermap.org/img/w/" + day2weatherimage + ".png";
+//     dateTwo.textContent = moment().add(2,'days').format('MM/DD/YYYY')
+//     tempTwo.textContent = "Temp: " + day2Temp + "°F";
+//     windTwo.textContent = "Wind: " + day2Wind + "MPH";
+//     humidTwo.textContent = "Humidity: " + day2Humid + "%";
+//     imageTwo.src = day2weatherimageLink;
+//     imageTwo.setAttribute("style", "display: inline");
 
-    // let day3Temp = dataForFiveDay.daily[16].temp.max;
-    // let day3Wind = dataForFiveDay.daily[3].wind_speed;
-    // let day3Humid = dataForFiveDay.daily[3].humidity;
-    // let day3weatherimage = dataForFiveDay.daily[3].weather[0].icon;
-    // let day3weatherimageLink = "https://openweathermap.org/img/w/" + day3weatherimage + ".png";
-    // dateThree.textContent = moment().add(3,'days').format('MM/DD/YYYY')
-    // tempThree.textContent = "Temp: " + day3Temp + "°F";
-    // windThree.textContent = "Wind: " + day3Wind + "MPH";
-    // humidThree.textContent = "Humidity: " + day3Humid + "%";
-    // imageThree.src = day3weatherimageLink;
-    // imageThree.setAttribute("style", "display: inline");
+//     let day3Temp = dataForFiveDay.daily[16].temp.max;
+//     let day3Wind = dataForFiveDay.daily[3].wind_speed;
+//     let day3Humid = dataForFiveDay.daily[3].humidity;
+//     let day3weatherimage = dataForFiveDay.daily[3].weather[0].icon;
+//     let day3weatherimageLink = "https://openweathermap.org/img/w/" + day3weatherimage + ".png";
+//     dateThree.textContent = moment().add(3,'days').format('MM/DD/YYYY')
+//     tempThree.textContent = "Temp: " + day3Temp + "°F";
+//     windThree.textContent = "Wind: " + day3Wind + "MPH";
+//     humidThree.textContent = "Humidity: " + day3Humid + "%";
+//     imageThree.src = day3weatherimageLink;
+//     imageThree.setAttribute("style", "display: inline");
 
-    // let day4Temp = dataForFiveDay.daily[24].temp.max;
-    // let day4Wind = dataForFiveDay.daily[4].wind_speed;
-    // let day4Humid = dataForFiveDay.daily[4].humidity;
-    // let day4weatherimage = dataForFiveDay.daily[4].weather[0].icon;
-    // let day4weatherimageLink = "https://openweathermap.org/img/w/" + day4weatherimage + ".png";
-    // dateFour.textContent = moment().add(4,'days').format('MM/DD/YYYY')
-    // tempFour.textContent = "Temp: " + day4Temp + "°F";
-    // windFour.textContent = "Wind: " + day4Wind + "MPH";
-    // humidFour.textContent = "Humidity: " + day4Humid + "%";
-    // imageFour.src = day4weatherimageLink;
-    // imageFour.setAttribute("style", "display: inline");
+//     let day4Temp = dataForFiveDay.daily[24].temp.max;
+//     let day4Wind = dataForFiveDay.daily[4].wind_speed;
+//     let day4Humid = dataForFiveDay.daily[4].humidity;
+//     let day4weatherimage = dataForFiveDay.daily[4].weather[0].icon;
+//     let day4weatherimageLink = "https://openweathermap.org/img/w/" + day4weatherimage + ".png";
+//     dateFour.textContent = moment().add(4,'days').format('MM/DD/YYYY')
+//     tempFour.textContent = "Temp: " + day4Temp + "°F";
+//     windFour.textContent = "Wind: " + day4Wind + "MPH";
+//     humidFour.textContent = "Humidity: " + day4Humid + "%";
+//     imageFour.src = day4weatherimageLink;
+//     imageFour.setAttribute("style", "display: inline");
 
-    // let day5Temp = dataForFiveDay.daily[32].temp.max;
-    // let day5Wind = dataForFiveDay.daily[5].wind_speed;
-    // let day5Humid = dataForFiveDay.daily[5].humidity;
-    // let day5weatherimage = dataForFiveDay.daily[5].weather[0].icon;
-    // let day5weatherimageLink = "https://openweathermap.org/img/w/" + day5weatherimage + ".png";
-    // dateFive.textContent = moment().add(5,'days').format('MM/DD/YYYY')
-    // tempFive.textContent = "Temp: " + day5Temp + "°F";
-    // windFive.textContent = "Wind: " + day5Wind + "MPH";
-    // humidFive.textContent = "Humidity: " + day5Humid + "%";
-    // imageFive.src = day5weatherimageLink;
-    // imageFive.setAttribute("style", "display: inline");
+//     let day5Temp = dataForFiveDay.daily[32].temp.max;
+//     let day5Wind = dataForFiveDay.daily[5].wind_speed;
+//     let day5Humid = dataForFiveDay.daily[5].humidity;
+//     let day5weatherimage = dataForFiveDay.daily[5].weather[0].icon;
+//     let day5weatherimageLink = "https://openweathermap.org/img/w/" + day5weatherimage + ".png";
+//     dateFive.textContent = moment().add(5,'days').format('MM/DD/YYYY')
+//     tempFive.textContent = "Temp: " + day5Temp + "°F";
+//     windFive.textContent = "Wind: " + day5Wind + "MPH";
+//     humidFive.textContent = "Humidity: " + day5Humid + "%";
+//     imageFive.src = day5weatherimageLink;
+//     imageFive.setAttribute("style", "display: inline");
 };
 
 function storeData(){
