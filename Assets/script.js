@@ -14,41 +14,41 @@ let cityArray = []
 let today = moment().format('MM/DD/YYYY');
 
 
-// forecast days
-// day1
-let day1 = document.querySelector("#day1");
-let image1 = document.querySelector("#image1");
-let temp1 = document.querySelector("#temp1");
-let wind1 = document.querySelector("#wind1");
-let humidity1 = document.querySelector("#humidity1");
+// // forecast days
+// // day1
+// let day1 = document.querySelector("#day1");
+// let image1 = document.querySelector("#image1");
+// let temp1 = document.querySelector("#temp1");
+// let wind1 = document.querySelector("#wind1");
+// let humidity1 = document.querySelector("#humidity1");
 
-// day2
-let day2 = document.querySelector("#day2");
-let image2 = document.querySelector("#image2");
-let temp2 = document.querySelector("#temp2");
-let wind2 = document.querySelector("#wind2");
-let humidity2 = document.querySelector("#humidity2");
+// // day2
+// let day2 = document.querySelector("#day2");
+// let image2 = document.querySelector("#image2");
+// let temp2 = document.querySelector("#temp2");
+// let wind2 = document.querySelector("#wind2");
+// let humidity2 = document.querySelector("#humidity2");
 
-// day3
-let day3 = document.querySelector("#day3");
-let image3 = document.querySelector("#image3");
-let temp3 = document.querySelector("#temp3");
-let wind3 = document.querySelector("#wind3");
-let humidity3 = document.querySelector("#humidity3");
+// // day3
+// let day3 = document.querySelector("#day3");
+// let image3 = document.querySelector("#image3");
+// let temp3 = document.querySelector("#temp3");
+// let wind3 = document.querySelector("#wind3");
+// let humidity3 = document.querySelector("#humidity3");
 
-// day4
-let day4 = document.querySelector("#day4");
-let image4 = document.querySelector("#image4");
-let temp4 = document.querySelector("#temp4");
-let wind4 = document.querySelector("#wind4");
-let humidity4 = document.querySelector("#humidity4");
+// // day4
+// let day4 = document.querySelector("#day4");
+// let image4 = document.querySelector("#image4");
+// let temp4 = document.querySelector("#temp4");
+// let wind4 = document.querySelector("#wind4");
+// let humidity4 = document.querySelector("#humidity4");
 
-// day5
-let day5 = document.querySelector("#day5");
-let image5 = document.querySelector("#image5");
-let temp5 = document.querySelector("#temp5");
-let wind5 = document.querySelector("#wind5");
-let humidity5 = document.querySelector("#humidity5");
+// // day5
+// let day5 = document.querySelector("#day5");
+// let image5 = document.querySelector("#image5");
+// let temp5 = document.querySelector("#temp5");
+// let wind5 = document.querySelector("#wind5");
+// let humidity5 = document.querySelector("#humidity5");
 
 let PCSButtons = document.querySelector("#previous-city-searched");
 let prevButtons = document.querySelector("#btn-block");
@@ -172,10 +172,10 @@ function storeData(){
         cityArray = prevCity;
         cityArray.unshift(city);
     }
-    // cityArray.splice(5);
+    cityArray.splice(5);
     localStorage.setItem("cities", JSON.stringify(cityArray));
 
-    // cityArray = [];
+    cityArray = [];
     preCities();
 }
 
@@ -200,7 +200,7 @@ search.addEventListener("click", function(event) {
     getData();
 });
 
-// prevCityButtons.addEventListener("click", function(event){
-//     city = event.target.innerText;
-//     getData();
-// });
+prevCityButtons.addEventListener("click", function(event){
+    city = event.target.innerText;
+    getData();
+});
